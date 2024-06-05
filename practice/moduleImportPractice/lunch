@@ -1,0 +1,13 @@
+#!/bin/python3
+
+"""Picks a random place to eat by using a function in a different 
+python module.
+"""
+
+import fast
+import sys
+
+sys.path.insert(0, '/Volumes/T7/Github/hackerrank/')
+
+place = fast.pick()
+print("Let's go to", place)
