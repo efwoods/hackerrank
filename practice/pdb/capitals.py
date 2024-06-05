@@ -15,7 +15,8 @@ def process_cities(filename):
     with open(filename, encoding='utf-8', mode='rt') as file:
         for line in file:
             line = line.strip() # strip the whitespace
-            if 'quit' in line.lower():
+            breakpoint()
+            if 'quit' == line.lower():
                 return
             country, city = line.split(',')
             city = city.strip()
