@@ -6,10 +6,8 @@ import random
 import re
 import sys
 
-sys.path.insert(0, '/Volumes/T7/Github/hackerrank/')
-
-from tools.debug_decorator import debug
-
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
+                                                "../..")))
 #
 # Complete the 'sockMerchant' function below.
 #
@@ -19,7 +17,6 @@ from tools.debug_decorator import debug
 #  2. INTEGER_ARRAY ar
 #
 
-@debug
 def sockMerchant(n, ar):
     """
     This function returns the number of pairs of socks in a given pile.
@@ -45,11 +42,9 @@ def sockMerchant(n, ar):
                     frequencyOfEachColorDict[currentColor] = 1
 
     for key, value in frequencyOfEachColorDict.items():
-        if value % 2 == 0:
-            pairs += 1
-
+        pairs += value // 2
     return pairs
-            
+
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
 
