@@ -35,5 +35,12 @@ class TestSalesByMatch(unittest.TestCase):
         result = sales_by_match.sockMerchant(5, [1,1,2,2,1])
         logging.info(f'pairs: {result}')
 
+    def tests03_test_fifteen_input_six_pairs(self):
+        n = 15
+        ar = [6, 5, 2, 3, 5, 2, 2, 1, 1, 5, 1, 3, 3, 3, 5]
+        result = sales_by_match.sockMerchant(n, ar)
+        logging.info(f'Number of actual pairs calculated: {result}')
+        self.assertEqual(result, 6)
+
 if __name__ == '__main__':
     unittest.main()
