@@ -38,5 +38,15 @@ class TestRepeatedString(unittest.TestCase):
         result = repeated_string.repeatedString(s ='a', n = 1000000000000)
         self.assertEqual(result, 1000000000000)
 
+    def test03_repeated_string_aba(self):
+        """Tests the default problem listed on HackerRank.
+        """
+
+        s = 'aba'
+        n = 10
+
+        result = repeated_string.repeatedString(s = s, n = n)
+        self.assertEqual(result, 6)
+
 if __name__ == '__main__':
     unittest.main()
