@@ -1,5 +1,8 @@
 #!/bin/python3
 
+"""This module contains a method that counts the number of valleys along
+a path."""
+
 import math
 import os
 import random
@@ -15,8 +18,28 @@ import sys
 #  2. STRING path
 #
 
-def countingValleys(steps, path):
-    # Write your code here
+def countingValleys(steps: int, path: str) -> int:
+    """A method that counts the number of valleys for a given path.
+
+    Args:
+        steps (int): The total number of steps in a path
+        path (str): The string containing the path. U indicates an
+                    upward step. D indicates a downward step.
+
+    Returns:
+        total_valleys (int): The number of valleys traversed.
+    """
+    
+    # Map a D to -1 & U to +1
+    # Keep a running sum and increment a valley variable each time the
+    # sum is below zero.
+    
+    total_valleys = 0
+    altitude = 0
+    # for stepIndex in range(0, steps):
+    #     if
+    
+    return total_valleys
     pass
 
 if __name__ == '__main__':
