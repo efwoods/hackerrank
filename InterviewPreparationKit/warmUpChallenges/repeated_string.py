@@ -26,6 +26,15 @@ def repeatedString(s, n):
         n (int): The length to search.
     """
 
+    # Edge Case: substring does not contain 'a'
+    substring_character_list = list(set(s))
+    if substring_character_list.count('a') == 0:
+        return 0
+    
+    # Edge Case: substring contains only a single 'a'.
+    if len(s) == 1:
+        return n
+
     # Increase the length of the substring to sufficiently meet the
     # length requirements of n.
     while len(s) < n:
