@@ -46,10 +46,7 @@ def repeatedString(s, n):
     else:
         # Search the substring for the number of occurences of the
         # character 'a'.
-        sub_occurences = 0
-        for stringIndex in range(0, len(s)):
-            if s[stringIndex] == 'a':
-                sub_occurences += 1
+        sub_occurences = s.count('a')
 
         factor_to_increase_s_by =  n // len(s)
         total_occurences = factor_to_increase_s_by * sub_occurences
