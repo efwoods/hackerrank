@@ -35,19 +35,26 @@ def repeatedString(s, n):
     if len(s) == 1:
         return n
 
-    # Increase the length of the substring to sufficiently meet the
-    # length requirements of n.
-    while len(s) < n:
-        s += s
-    
-    # Search the string for the number of occurences of the character
-    # 'a' up to the length of 'n'.
-    total_occurences = 0
-    for stringIndex in range(0, n):
-        if s[stringIndex] == 'a':
-            total_occurences += 1
+    if n < len(s):
+        # Search the substring for the number of occurences of the character
+        # 'a' up to length 'n'.
+        sub_occurences = 0
+        for stringIndex in range(0, n):
+            if s[stringIndex] == 'a':
+                sub_occurences += 1
+        return sub_occurences
+    else:
+        # Search the substring for the number of occurences of the
+        # character 'a'.
+        sub_occurences = 0
+        for stringIndex in range(0, len(s)):
+            if s[stringIndex] == 'a':
+                sub_occurences += 1
 
-    return total_occurences
+        factor_to_increase_s_by =  n // len(s)
+        total_occurences = factor_to_increase_s_by * sub_occurences
+
+        return total_occurences
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
