@@ -1,6 +1,5 @@
-"""This module creates a huffman tree data structure."""
-
-
+"""This module creates a huffman tree data structure. 
+https://www.hackerrank.com/challenges/tree-huffman-decoding/problem"""
 
 cntr = 0
 
