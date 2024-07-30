@@ -25,13 +25,11 @@ class TestArraysDS(unittest.TestCase):
         pass
 
     def test01_test_reverse_array(self):
-        """This tests the reverseArrays method with a base case.
-        """
+        """This tests the reverseArrays method with a base case."""
 
         arr = [1, 2, 3, 4]
         result = arrays_ds.reverseArray(arr)
         self.assertEqual(result, [4, 3, 2, 1])
-        
 
 if __name__ == '__main__':
     unittest.main()
